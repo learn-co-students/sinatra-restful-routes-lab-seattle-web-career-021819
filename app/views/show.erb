@@ -1,0 +1,17 @@
+<h1>This is the 'show.erb' view.</h1>
+
+Recipe name: <%= @recipe.name %><br>
+Ingredients: <%= @recipe.ingredients %><br>
+Cook Time: <%= @recipe.cook_time %><br>
+<br><br>
+
+<form method="POST" action="/recipes/<%= @recipe.id %>">
+  <input id="hidden" type="hidden" name="_method" value="DELETE">
+  <input id="delete" type="submit" value="BALEETED!!">
+</form>
+
+<!--
+<form method="GET" action="/recipes">
+  <input type="submit" value="Go back to main page">
+</form>
+-->

@@ -1,0 +1,18 @@
+<h1>This is the 'index.erb' view.</h1>
+
+
+<h2>All recipes:</h2>
+<!-- Needs to change to show HREF LINKS to each '/recipes/:id' -->
+<% @recipes.each do |recipe| %>
+  Recipe name: <%= recipe.name %><br>
+  Ingredients: <%= recipe.ingredients %><br>
+  Cook Time: <%= recipe.cook_time %><br>
+  <a href="/recipes/<%= recipe.id %>">Recipe #<%= recipe.id %></a>
+  <br><br>
+<% end %>
+
+
+
+<form method="GET" action="/recipes/new">
+  Create a new recipe: <input type="submit" value="LEZGO!!">
+</form>
