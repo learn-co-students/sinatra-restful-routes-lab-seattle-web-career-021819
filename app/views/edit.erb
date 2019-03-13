@@ -1,0 +1,9 @@
+<h1>This is the '/recipes/:id/edit' view.</h1>
+
+<form method="POST" action="/recipes/<%= @recipe.id %>">
+  <input id="hidden" type="hidden" name="_method" value="PATCH">
+  <input id="edit_name" type="text" name="name" value="<%= @recipe.name %>">
+  <input id="edit_ingredients" type="text" name="ingredients" value="<%= @recipe.ingredients %>">
+  <input id="edit_cook_time" type="text" name="cook_time" value="<%= @recipe.cook_time %>">
+  <input type="submit" value="Update Recipe">
+</form>
