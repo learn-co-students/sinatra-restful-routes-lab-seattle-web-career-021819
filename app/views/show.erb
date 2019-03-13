@@ -1,0 +1,13 @@
+<h1>Your Recipe!</h1>
+
+<ul>
+  <li>Name: <%= @lookup_recipe.name %></li>
+  <li>Ingredients: <%= @lookup_recipe.ingredients %></li>
+  <li>Cook Time: <%= @lookup_recipe.cook_time %></li>
+</ul>
+
+<form action="/recipes/<%=@lookup_recipe.id %>" method="post">
+  <input id="hidden" type="hidden" name="_method" value="delete">
+  <label for="delete">Delete</label>
+  <input type="submit" name="delete" value="delete">
+</form>
