@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Individual Recipe Page</title>
+  </head>
+  <body>
+    <h1><%=@recipe.name%></h1>
+    <h3><%=@recipe.cook_time%></h3>
+    <h2><%=@recipe.ingredients%></h2>
+    <form action="/recipes/<%=@recipe.id%>" method="post">
+      <input id="hidden" type="hidden" name="_method" value="delete">
+      <input type="submit" id="delete" value="Delete">
+    </form>
+    <a href="/recipes/<%=@recipe.id%>/edit"><h4>Edit Recipe</h4></a>
+    <a href="/recipes"><h4>Go Home</h4></a>
+  </body>
+</html>
